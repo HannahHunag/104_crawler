@@ -34,7 +34,8 @@ nosql_list = []
 # 抓不同頁
 for i in range(1,3):
     url = f"https://www.104.com.tw/jobs/search/?ro=0&keyword=python&expansionType=area%2Cspec%2Ccom%2Cjob%2Cwf%2Cwktm&order=15&asc=0&page={i}&mode=s&jobsource=2018indexpoc&langFlag=0&langStatus=0&recommendJob=1&hotJob=1"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"}
+    # 輸入你自己的User-Agent
+    headers = {"User-Agent": "your_User-Agent"}
     res = requests.post(url, headers=headers, data=data)
     soup = BeautifulSoup(res.text, 'html.parser')
     # 公司名稱
